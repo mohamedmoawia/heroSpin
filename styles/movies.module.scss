@@ -1,0 +1,108 @@
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(31, 31, 31);
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5rem;
+    button {
+      padding: 10px 30px;
+      background-color: #939393;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0px 10px;
+      transition: filter 0.2s;
+  
+      // @media screen and (max-width: 425px) {
+      //   font-size: 2.5rem;
+      // }
+      &:hover {
+        filter: brightness(85%);
+      }
+    }
+  }
+  
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0px;
+  }
+  
+  .movies {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+  
+    .movie {
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-right: 20px;
+      position: relative;
+      width: 300px;
+      margin-bottom: 10px;
+  
+      @media screen and (max-width: 425px) {
+        margin-right: 0px;
+      }
+  
+      &__overlay {
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+      }
+  
+      &__imgContainer {
+        width: 300px;
+        height: 300px;
+  
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+  
+      &__details {
+        background-color: white;
+        padding: 10px;
+        transition: max-height 1s;
+        width: '100%';
+        font-size: 1.6rem;
+  
+        a {
+          margin-top: 5px;
+          width: 100%;
+          padding: 7px;
+          background-color: #b2b2c6;
+          color: white;
+          border: 0px;
+          border-radius: 5px;
+          display: block;
+          text-align: center;
+          transition: filter 0.2s;
+  
+          &:hover {
+            filter: brightness(85%);
+          }
+        }
+      }
+    }
+  }
+  
